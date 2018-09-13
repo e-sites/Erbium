@@ -67,7 +67,7 @@ public class Device {
 	}
 	
 	public static var isSimulator: Bool {
-        #if arch(i386) || arch(x86_64)
+        #if targetEnvironment(simulator)
             return true
         #else
             return false
@@ -81,7 +81,7 @@ public class Device {
 extension Device {
     public static var hasFaceID: Bool {
         switch version {
-        case .iPhoneX:
+        case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
             return true
         default:
             return false
@@ -98,10 +98,10 @@ extension Device {
     }
     
     public static var hasNotch: Bool {
-        return version == .iPhoneX
+        return version == .iPhoneX || version == .iPhoneXS || version == .iPhoneXSMax || version == .iPhoneXR
     }
     
     public static var hasHardwareHomeButton: Bool {
-        return version != .iPhoneX
+        return version != .iPhoneX && version != .iPhoneXS && version != .iPhoneXSMax && version == .iPhoneXR
     }
 }
