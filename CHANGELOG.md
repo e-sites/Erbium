@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.1.2 (19-09-2018)
+- Removed print line
+
 ## v4.1.0 (13-09-2018)
 - iPhoneXS, iPhoneXSMax and iPhoneXR compatible
 

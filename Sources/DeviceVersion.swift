@@ -57,7 +57,6 @@ public enum DeviceVersion {
 
     init(platformName: String) {
         if Device.isSimulator, let tmpPlatformName = ProcessInfo.processInfo.environment["SIMULATOR_MODEL_IDENTIFIER"] {
-            print("----> platform: \(tmpPlatformName)")
             self = DeviceVersion._version(fromPlatformName: tmpPlatformName)
             return
         }
