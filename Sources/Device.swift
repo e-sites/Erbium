@@ -8,71 +8,72 @@
 
 import Foundation
 import UIKit
+import LocalAuthentication
 
 public class Device {
-	
-	/// Lazy variables
-	
-	public static var platform: String = {
-		var systemInfo = utsname()
-		uname(&systemInfo)
-		let nsString = NSString(bytes: &systemInfo.machine,
+
+    /// Lazy variables
+
+    public static var platform: String = {
+        var systemInfo = utsname()
+        uname(&systemInfo)
+        let nsString = NSString(bytes: &systemInfo.machine,
                                 length: Int(_SYS_NAMELEN),
                                 encoding: String.Encoding.ascii.rawValue)!
-		return String(validatingUTF8: nsString.utf8String!)!
-	}()
-	
-	public static var type: DeviceType = {
-		return DeviceType(device: UIDevice.current)
-	}()
-	
-	public static var size: ScreenSize = {
-		return ScreenSize(screen: UIScreen.main)
-	}()
-	
-	public static var version: DeviceVersion = {
-		return DeviceVersion(platformName: Device.platform)
-	}()
-	
-	/// Helpers
-	
+        return String(validatingUTF8: nsString.utf8String!)!
+    }()
+
+    public static var type: DeviceType = {
+        return DeviceType(device: UIDevice.current)
+    }()
+
+    public static var size: ScreenSize = {
+        return ScreenSize(screen: UIScreen.main)
+    }()
+
+    public static var version: DeviceVersion = {
+        return DeviceVersion(platformName: Device.platform)
+    }()
+
+    /// Helpers
+
     public static var scale: CGFloat {
-		return UIScreen.main.scale
-	}	
-	
-	public static var isRegularIpad: Bool {
-		return !isIpadPro && !isIpadMini
-	}
-	
-	public static var isIpadPro: Bool {
-		switch (version) {
-		case .iPadPro9_7Inch,
-		     .iPadPro12_9Inch:
-			return true
-		default:
-			return false
-		}
-	}
-	
-	public static var isIpadMini: Bool {
-		switch (version) {
-		case .iPadMini,
-		     .iPadMini2,
-		     .iPadMini3,
-		     .iPadMini4:
-			return true
-		default:
-			return false
-		}
-	}
-	
-	public static var isSimulator: Bool {
-        #if targetEnvironment(simulator)
+        return UIScreen.main.scale
+    }
+
+    public static var isRegularIpad: Bool {
+        return !isIpadPro && !isIpadMini
+    }
+
+    public static var isIpadPro: Bool {
+        switch (version) {
+        case .iPadPro9_7Inch,
+             .iPadPro12_9Inch:
             return true
-        #else
+        default:
             return false
+        }
+    }
+
+    public static var isIpadMini: Bool {
+        switch (version) {
+        case .iPadMini,
+             .iPadMini2,
+             .iPadMini3,
+             .iPadMini4:
+            return true
+        default:
+            return false
+        }
+    }
+
+    public static var isSimulator: Bool {
+        #if targetEnvironment(simulator)
+        return true
+        #else
+        return false
         #endif
-	}
+    }
 }
 
 // MARK: - Hardware capabilities
@@ -80,28 +81,36 @@ public class Device {
 
 extension Device {
     public static var hasFaceID: Bool {
-        switch version {
-        case .iPhoneX, .iPhoneXS, .iPhoneXSMax, .iPhoneXR:
-            return true
-        default:
-            return false
+        if #available(iOS 11.0, *) {
+            let localAuthenticationContext = LAContext()
+            if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+                return localAuthenticationContext.biometryType == .faceID
+            }
         }
+        return false
     }
 
     public static var hasTouchID: Bool {
-        switch version {
-        case .iPhone5S, .iPhone6, .iPhone6Plus, .iPhone6S, .iPhone6SPlus, .iPhoneSE, .iPhone7, .iPhone7Plus, .iPhone8, .iPhone8Plus:
-            return true
-        default:
-            return false
+        if #available(iOS 11.0, *) {
+            let localAuthenticationContext = LAContext()
+            if localAuthenticationContext.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil) {
+                return localAuthenticationContext.biometryType == .touchID
+            }
         }
+        return false
     }
-    
+
     public static var hasNotch: Bool {
-        return version == .iPhoneX || version == .iPhoneXS || version == .iPhoneXSMax || version == .iPhoneXR
+        if #available(iOS 11.0, *) {
+            return (UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0) > 20
+        }
+        return false
     }
-    
+
     public static var hasHardwareHomeButton: Bool {
-        return version != .iPhoneX && version != .iPhoneXS && version != .iPhoneXSMax && version == .iPhoneXR
+        if #available(iOS 11.0, *) {
+            return (UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0) == 0
+        }
+        return true
     }
 }

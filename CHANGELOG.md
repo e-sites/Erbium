@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.2.0 (20-09-2018)
+- Improved `hasFaceID`, `hasTouchID`, `hasNotch` and `hasHardwareHomeButton` to make it more futureproof.
+
 ## v4.1.2 (19-09-2018)
 - Removed print line
 
