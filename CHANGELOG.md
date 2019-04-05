@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.3.0 (05-04-2019)
+- Swift 5.0
+
 ## v4.2.0 (20-09-2018)
 - Improved `hasFaceID`, `hasTouchID`, `hasNotch` and `hasHardwareHomeButton` to make it more futureproof.
 
