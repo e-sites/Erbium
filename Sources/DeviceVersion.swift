@@ -6,6 +6,8 @@
 //  Copyright © 2016 E-sites. All rights reserved.
 //
 
+import Foundation
+
 public enum DeviceVersion {
     /*** iPhone ***/
     case iPhone4
