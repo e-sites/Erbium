@@ -69,12 +69,20 @@
 			path = ErbiumTests;
 			sourceTree = "<group>";
 		};
+		CEB2D9C998CBE08BF0F8D1522480E61A /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Dependencies;
+			sourceTree = "<group>";
+		};
 		DF2D49731D65A6D4005B644B = {
 			isa = PBXGroup;
 			children = (
 				DF2D497F1D65A6D4005B644B /* Environment */,
 				C3D58E6D20FCCDD6000ED8CE /* ErbiumTests */,
 				DF2D497E1D65A6D4005B644B /* Products */,
+				CEB2D9C998CBE08BF0F8D1522480E61A /* Dependencies */,
 			);
 			sourceTree = "<group>";
 		};
