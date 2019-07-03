@@ -19,7 +19,9 @@ public enum ScreenSize: Float, Comparable {
     case screen6_5Inch = 6.5
 	case screen7_9Inch = 7.9
 	case screen9_7Inch = 9.7
-	case screen12_9Inch = 12.9
+    case screen10_5Inch = 10.5
+    case screen11Inch = 11
+    case screen12_9Inch = 12.9
 	case screen1080pTV = 44
 	
     init (screen: UIScreen) {
@@ -46,6 +48,10 @@ public enum ScreenSize: Float, Comparable {
 					self = .screen7_9Inch
 				}
 				self = .screen9_7Inch
+            case 1112:
+                self = .screen10_5Inch
+            case 1194:
+                self = .screen11Inch
 			case 1366:
 				self = .screen12_9Inch
 			default:
@@ -76,6 +82,12 @@ public enum ScreenSize: Float, Comparable {
 
         case .screen5_8Inch:
             return 812
+
+        case .screen11Inch:
+            return 834
+
+        case .screen10_5Inch:
+            return 834
 
         case .screen1080pTV:
             return 1080

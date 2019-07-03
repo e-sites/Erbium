@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "Erbium"
-  s.version      = "4.3.0"
+  s.version      = "4.4.0"
   s.author       = { "Bas van Kuijck" => "bas@e-sites.nl" }
   s.license      = { :type => "MIT", :file => "LICENSE" }
   s.homepage     = "http://www.e-sites.nl"
@@ -11,4 +11,5 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '8.0'
   s.frameworks   = "LocalAuthentication"
   s.requires_arc = true
+  s.swift_versions = [ "4.2", "5.0" ]
 end

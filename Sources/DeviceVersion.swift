@@ -34,14 +34,22 @@ public enum DeviceVersion {
     case iPad2
     case iPadMini
     case iPad3
+    case iPad5
     case iPad4
+    case iPad6
     case iPadAir
     case iPadMini2
     case iPadAir2
+    case iPadAir3
     case iPadMini3
     case iPadMini4
+    case iPadMini5
     case iPadPro9_7Inch
+    case iPadPro10_5Inch
+    case iPadPro11Inch
     case iPadPro12_9Inch
+    case iPadPro12_9Inch2
+    case iPadPro12_9Inch3
 
     /*** AppleTV ***/
     case appleTV
@@ -83,23 +91,31 @@ public enum DeviceVersion {
         case "iPhone10,1", "iPhone10,4":                 return .iPhone8
         case "iPhone10,2", "iPhone10,5":                 return .iPhone8Plus
         case "iPhone10,3", "iPhone10,6":                 return .iPhoneX
-        case "iPhone11,1", "iPhone11,4":                 return .iPhoneXS
-        case "iPhone11,2", "iPhone11,5":                 return .iPhoneXSMax
-        case "iPhone11,3", "iPhone11,6":                 return .iPhoneXR
+        case "iPhone11,2":                               return .iPhoneXS
+        case "iPhone11,6":                               return .iPhoneXSMax
+        case "iPhone11,8":                               return .iPhoneXR
 
             /*** iPad ***/
         case "iPad1,1":                                  return .iPad1
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
         case "iPad3,1", "iPad3,2", "iPad3,3":            return .iPad3
         case "iPad3,4", "iPad3,5", "iPad3,6":            return .iPad4
+        case "iPad6,11", "iPad6,12":                     return .iPad5
+        case "iPad7,5", "iPad7,6":                       return .iPad6
         case "iPad4,1", "iPad4,2", "iPad4,3":            return .iPadAir
         case "iPad5,3", "iPad5,4":                       return .iPadAir2
+        case "iPad11,3", "iPad11,4":                     return .iPadAir3
         case "iPad2,5", "iPad2,6", "iPad2,7":            return .iPadMini
         case "iPad4,4", "iPad4,5", "iPad4,6":            return .iPadMini2
         case "iPad4,7", "iPad4,8", "iPad4,9":            return .iPadMini3
         case "iPad5,1", "iPad5,2":                       return .iPadMini4
-        case "iPad6,7", "iPad6,8":                       return .iPadPro9_7Inch
-        case "iPad6,3", "iPad6,4":                       return .iPadPro12_9Inch
+        case "iPad11,1", "iPad11,2":                     return .iPadMini5
+        case "iPad6,3", "iPad6,4":                       return .iPadPro9_7Inch
+        case "iPad7,3", "iPad7,4":                       return .iPadPro10_5Inch
+        case "iPad8,3", "iPad8,4":                       return .iPadPro11Inch
+        case "iPad6,7", "iPad6,8":                       return .iPadPro12_9Inch
+        case "iPad7,1", "iPad7,2":                       return .iPadPro12_9Inch2
+        case "iPad8,5", "iPad8,6", "iPad8,7", "iPad8,8": return .iPadPro12_9Inch3
 
             /*** iPod ***/
         case "iPod1,1":                                  return .iPodTouch1Gen
@@ -141,16 +157,24 @@ public enum DeviceVersion {
             /*** iPad ***/
         case .iPad1: return "iPad 1"
         case .iPad2: return "iPad 2"
-        case .iPadMini: return "iPad Mini 1"
-        case .iPad3: return "iPad 3"
-        case .iPad4: return "iPad 4"
+        case .iPad3: return "iPad (3rd generation)"
+        case .iPad4: return "iPad (4th generation)"
+        case .iPad5: return "iPad (5th generation)"
+        case .iPad6: return "iPad (6th generation)"
         case .iPadAir: return "iPad Air"
-        case .iPadMini2: return "iPad Mini 2"
         case .iPadAir2: return "iPad Air 2"
+        case .iPadAir3: return "iPad Air (3rd generation)"
+        case .iPadMini: return "iPad Mini 1"
+        case .iPadMini2: return "iPad Mini 2"
         case .iPadMini3: return "iPad Mini 3"
         case .iPadMini4: return "iPad Mini 4"
-        case .iPadPro9_7Inch: return "iPad Pro 9.7 Inch"
-        case .iPadPro12_9Inch: return "iPad Pro 12.9 Inch"
+        case .iPadMini5: return "iPad mini (5th generation)"
+        case .iPadPro9_7Inch: return "iPad Pro (9.7-inch)"
+        case .iPadPro10_5Inch: return "iPad Pro (10.5-inch)"
+        case .iPadPro11Inch: return "iPad Pro (11-inch)"
+        case .iPadPro12_9Inch: return "iPad Pro (12.9-inch)"
+        case .iPadPro12_9Inch2: return "iPad Pro (12.9-inch) (2nd generation)"
+        case .iPadPro12_9Inch3: return "iPad Pro (12.9-inch) (3rd generation)"
 
             /*** AppleTV ***/
         case .appleTV: return "Apple TV"

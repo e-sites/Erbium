@@ -48,7 +48,11 @@ public class Device {
     public static var isIpadPro: Bool {
         switch (version) {
         case .iPadPro9_7Inch,
-             .iPadPro12_9Inch:
+             .iPadPro12_9Inch,
+             .iPadPro11Inch,
+             .iPadPro10_5Inch,
+             .iPadPro12_9Inch2,
+             .iPadPro12_9Inch3:
             return true
         default:
             return false
@@ -60,7 +64,8 @@ public class Device {
         case .iPadMini,
              .iPadMini2,
              .iPadMini3,
-             .iPadMini4:
+             .iPadMini4,
+             .iPadMini5:
             return true
         default:
             return false
