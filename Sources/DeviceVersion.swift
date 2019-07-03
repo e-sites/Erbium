@@ -61,6 +61,7 @@ public enum DeviceVersion {
     case iPodTouch4Gen
     case iPodTouch5Gen
     case iPodTouch6Gen
+    case iPodTouch7Gen
 
     /*** Unknown ***/
     case unknown
@@ -124,6 +125,7 @@ public enum DeviceVersion {
         case "iPod4,1":                                  return .iPodTouch4Gen
         case "iPod5,1":                                  return .iPodTouch5Gen
         case "iPod7,1":                                  return .iPodTouch6Gen
+        case "iPod9,1":                                  return .iPodTouch7Gen
 
             /*** AppleTV ***/
         case "AppleTV5,1", "AppleTV5,2", "AppleTV5,3":   return .appleTV
@@ -180,12 +182,13 @@ public enum DeviceVersion {
         case .appleTV: return "Apple TV"
 
             /*** iPod ***/
-        case .iPodTouch1Gen: return "iPod Touch 1"
-        case .iPodTouch2Gen: return "iPod Touch 2"
-        case .iPodTouch3Gen: return "iPod Touch 3"
-        case .iPodTouch4Gen: return "iPod Touch 4"
-        case .iPodTouch5Gen: return "iPod Touch 5"
-        case .iPodTouch6Gen: return "iPod Touch 6"
+        case .iPodTouch1Gen: return "iPod Touch"
+        case .iPodTouch2Gen: return "iPod touch (2nd generation)"
+        case .iPodTouch3Gen: return "iPod touch (3rd generation)"
+        case .iPodTouch4Gen: return "iPod touch (4th generation)"
+        case .iPodTouch5Gen: return "iPod touch (5th generation)"
+        case .iPodTouch6Gen: return "iPod touch (6th generation)"
+        case .iPodTouch7Gen: return "iPod touch (7th generation)"
 
             /*** Unknown ***/
         case .unknown: return "Unknown"
