@@ -44,7 +44,7 @@ public enum ScreenSize: Float, Comparable {
             case 896:
                 self = (Device.scale == 3.0 ? .screen6_5Inch : .screen6_1Inch)
 			case 1024:
-				if (Device.isIpadMini) {
+				if Device.isIpadMini {
 					self = .screen7_9Inch
 				}
 				self = .screen9_7Inch

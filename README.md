@@ -10,7 +10,6 @@ A small library to use for your file system.
 
 [![Platform](https://img.shields.io/cocoapods/p/Erbium.svg?style=flat)](http://cocoadocs.org/docsets/Erbium)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/Erbium.svg)](http://cocoadocs.org/docsets/Erbium)
-[![Quality](https://apps.e-sites.nl/cocoapodsquality/Erbium/badge.svg?004)](https://cocoapods.org/pods/Erbium/quality)
 [![Travis-ci](https://travis-ci.org/e-sites/Erbium.svg?branch=master&001)](https://travis-ci.org/e-sites/Erbium)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 

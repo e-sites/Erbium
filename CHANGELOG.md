@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.4.1 (11-09-2019)
+- Added iPhone 11 models
+
 ## v4.3.0 (05-04-2019)
 - Swift 5.0
 
