@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.4.3 (02-10-2020)
+- Fixed Comparable operator
+
 ## v4.4.1 (11-09-2019)
 - Added iPhone 11 models
 

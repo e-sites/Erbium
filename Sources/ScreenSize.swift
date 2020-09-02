@@ -8,7 +8,7 @@
 
 import UIKit
 
-public enum ScreenSize: Float, Comparable {
+public enum ScreenSize: Double, Comparable {
 	case unknown = 0
 	case screen3_5Inch = 3.5
 	case screen4Inch = 4.0
@@ -118,24 +118,24 @@ public enum ScreenSize: Float, Comparable {
             return 768
         }
     }
-}
 
-public func == (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
-	return lhs.rawValue == rhs.rawValue
-}
-
-public func < (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
-	return lhs.rawValue < rhs.rawValue
-}
-
-public func > (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
-	return lhs.rawValue > rhs.rawValue
-}
-
-public func <= (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
-	return lhs.rawValue <= rhs.rawValue
-}
-
-public func >= (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
-	return lhs.rawValue >= rhs.rawValue
+    public static func == (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+        return lhs.rawValue == rhs.rawValue
+    }
+    
+    public static func < (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+        return lhs.rawValue < rhs.rawValue
+    }
+    
+    public static func > (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+        return lhs.rawValue > rhs.rawValue
+    }
+    
+    public static func <= (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+        return lhs.rawValue <= rhs.rawValue
+    }
+    
+    public static func >= (lhs: ScreenSize, rhs: ScreenSize) -> Bool {
+        return lhs.rawValue >= rhs.rawValue
+    }
 }
