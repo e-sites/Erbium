@@ -31,6 +31,10 @@ public enum DeviceVersion {
     case iPhone11
     case iPhone11Pro
     case iPhone11ProMax
+    case iPhone12
+    case iPhone12Mini
+    case iPhone12Pro
+    case iPhone12ProMax
 
     /*** iPad ***/
     case iPad1
@@ -101,7 +105,11 @@ public enum DeviceVersion {
         case "iPhone12,1":                               return .iPhone11
         case "iPhone12,3":                               return .iPhone11Pro
         case "iPhone12,5":                               return .iPhone11ProMax
-
+        case "iPhone13,1":                               return .iPhone12Mini
+        case "iPhone13,2":                               return .iPhone12
+        case "iPhone13,3":                               return .iPhone12Pro
+        case "iPhone13,4":                               return .iPhone12ProMax
+            
             /*** iPad ***/
         case "iPad1,1":                                  return .iPad1
         case "iPad2,1", "iPad2,2", "iPad2,3", "iPad2,4": return .iPad2
@@ -164,6 +172,10 @@ public enum DeviceVersion {
         case .iPhone11: return "iPhone 11"
         case .iPhone11Pro: return "iPhone 11 Pro"
         case .iPhone11ProMax: return "iPhone 11 Pro Max"
+        case .iPhone12Mini: return "iPhone 12 Mini"
+        case .iPhone12: return "iPhone 12"
+        case .iPhone12Pro: return "iPhone 12 Pro"
+        case .iPhone12ProMax: return "iPhone 12 Pro Max"
 
             /*** iPad ***/
         case .iPad1: return "iPad 1"

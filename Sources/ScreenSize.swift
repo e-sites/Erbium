@@ -13,10 +13,12 @@ public enum ScreenSize: Double, Comparable {
 	case screen3_5Inch = 3.5
 	case screen4Inch = 4.0
 	case screen4_7Inch = 4.7
-	case screen5_5Inch = 5.5
+    case screen5_4Inch = 5.4
+    case screen5_5Inch = 5.5
     case screen5_8Inch = 5.8
     case screen6_1Inch = 6.1
     case screen6_5Inch = 6.5
+    case screen6_7Inch = 6.7
 	case screen7_9Inch = 7.9
 	case screen9_7Inch = 9.7
     case screen10_5Inch = 10.5
@@ -40,9 +42,13 @@ public enum ScreenSize: Double, Comparable {
 			case 736:
 				self = .screen5_5Inch
             case 812:
-                self = .screen5_8Inch
+                self = (Device.scale == 3.0 ? .screen5_4Inch : .screen5_8Inch)
+            case 844:
+                self = .screen6_1Inch
             case 896:
                 self = (Device.scale == 3.0 ? .screen6_5Inch : .screen6_1Inch)
+            case 926:
+                self = .screen6_7Inch
 			case 1024:
 				if Device.isIpadMini {
 					self = .screen7_9Inch
@@ -74,6 +80,9 @@ public enum ScreenSize: Double, Comparable {
         case .screen4_7Inch:
             return 667
 
+        case .screen5_4Inch:
+            return 812
+            
         case .screen5_5Inch:
             return 736
 
@@ -105,11 +114,17 @@ public enum ScreenSize: Double, Comparable {
         case .screen3_5Inch, .screen4Inch:
             return 320
 
-        case .screen4_7Inch, .screen5_8Inch:
+        case .screen4_7Inch, .screen5_4Inch, .screen5_8Inch:
             return 375
-
-        case .screen5_5Inch, .screen6_1Inch, .screen6_5Inch:
+            
+        case .screen5_5Inch, .screen6_5Inch:
             return 414
+            
+        case .screen6_1Inch:
+            return 390
+            
+        case .screen6_7Inch:
+            return 428
 
         case .screen1080pTV:
             return 1920
