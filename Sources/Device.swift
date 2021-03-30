@@ -120,7 +120,7 @@ extension Device {
     }
 
     public static var hasNotch: Bool {
-        return topInset > 0
+        return topInset >= 44
     }
 
     public static var hasHardwareHomeButton: Bool {

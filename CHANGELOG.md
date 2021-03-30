@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.5.2 (30-03-2021)
+- Fixed `hasNotch` 
+
 ## v4.4.3 (02-10-2020)
 - Fixed Comparable operator
 
