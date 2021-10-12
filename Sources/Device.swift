@@ -107,14 +107,14 @@ extension Device {
     
     public static var topInset: CGFloat {
         if #available(iOS 11.0, *) {
-            return UIApplication.shared.delegate?.window??.safeAreaInsets.top ?? 0
+            return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
         }
         return 20
     }
     
     public static var bottomInset: CGFloat {
         if #available(iOS 11.0, *) {
-            return UIApplication.shared.delegate?.window??.safeAreaInsets.bottom ?? 0
+            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
         }
         return 0
     }

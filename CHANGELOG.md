@@ -1,5 +1,11 @@
 # Changelog Erbium
 
+## v4.5.4 (12-10-2021)
+- Added iPhone 13
+
+## v4.5.3 (17-06-2021)
+- Use `keyWindow`
+
 ## v4.5.2 (30-03-2021)
 - Fixed `hasNotch` 
 
