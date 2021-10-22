@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.5.5 (22-10-2021)
+- Fixed iOS15
+
 ## v4.5.4 (12-10-2021)
 - Added iPhone 13
 
