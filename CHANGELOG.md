@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.6.1 (08-90-2022)
+- iOS14 fix
+
 ## v4.6.0 (08-90-2022)
 - iPhone14 models
 

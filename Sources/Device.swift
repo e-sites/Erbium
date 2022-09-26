@@ -106,23 +106,19 @@ extension Device {
     }
     
     public static var topInset: CGFloat {
-        if #available(iOS 15.0, *) {
-            return UIApplication.shared.windows.first?.safeAreaInsets.top ?? 0
-        } else if #available(iOS 11.0, *) {
-            return UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
-        }
-        return 20
-    }
-    
-    public static var bottomInset: CGFloat {
-        if #available(iOS 15.0, *) {
-            return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? 0
-        } else if #available(iOS 11.0, *) {
-            return UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.windows.first?.safeAreaInsets.top ?? UIApplication.shared.keyWindow?.safeAreaInsets.top ?? 0
         }
         return 0
     }
-
+    
+    public static var bottomInset: CGFloat {
+        if #available(iOS 11.0, *) {
+            return UIApplication.shared.windows.first?.safeAreaInsets.bottom ?? UIApplication.shared.keyWindow?.safeAreaInsets.bottom ?? 0
+        }
+        return 0
+    }
+    
     public static var hasNotch: Bool {
         return topInset >= 44
     }
