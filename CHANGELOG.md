@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.6.2 (23-05-2023)
+- Dynamic island
+
 ## v4.6.1 (08-90-2022)
 - iOS14 fix
 

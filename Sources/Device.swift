@@ -122,7 +122,11 @@ extension Device {
     public static var hasNotch: Bool {
         return topInset >= 44
     }
-
+    
+    public static var hasDynamicIsland: Bool {
+        return topInset >= 51
+    }
+    
     public static var hasHardwareHomeButton: Bool {
         return bottomInset == 0
     }
