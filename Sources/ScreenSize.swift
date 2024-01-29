@@ -43,11 +43,11 @@ public enum ScreenSize: Double, Comparable {
 				self = .screen5_5Inch
             case 812:
                 self = (Device.scale == 3.0 ? .screen5_4Inch : .screen5_8Inch)
-            case 844:
+            case 852,844:
                 self = .screen6_1Inch
             case 896:
                 self = (Device.scale == 3.0 ? .screen6_5Inch : .screen6_1Inch)
-            case 926:
+            case 932,926:
                 self = .screen6_7Inch
 			case 1024:
 				if Device.isIpadMini {

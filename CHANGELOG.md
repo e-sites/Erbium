@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.6.3 (29-01-2024)
+- iPhone 15
+
 ## v4.6.2 (23-05-2023)
 - Dynamic island
 
