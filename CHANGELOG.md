@@ -1,5 +1,8 @@
 # Changelog Erbium
 
+## v4.7.0 (20-09-2024)
+- Swift 6
+
 ## v4.6.3 (29-01-2024)
 - iPhone 15
 

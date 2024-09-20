@@ -47,6 +47,10 @@ public enum DeviceVersion {
     case iPhone15Pro
     case iPhone15Plus
     case iPhone15ProMax
+    case iPhone16
+    case iPhone16Pro
+    case iPhone16Plus
+    case iPhone16ProMax
     
 
     /*** iPad ***/
@@ -95,6 +99,8 @@ public enum DeviceVersion {
     }
 
     private static func _version(fromPlatformName platformName: String) -> DeviceVersion {
+        
+        // See https://gist.github.com/adamawolf/3048717
         switch (platformName) {
             /*** iPhone ***/
         case "iPhone3,1", "iPhone3,2", "iPhone3,3":      return .iPhone4
@@ -134,6 +140,10 @@ public enum DeviceVersion {
         case "iPhone15,5":                               return .iPhone15Plus
         case "iPhone16,1":                               return .iPhone15Pro
         case "iPhone16,2":                               return .iPhone15ProMax
+        case "iPhone17,3":                               return .iPhone16
+        case "iPhone17,4":                               return .iPhone16Plus
+        case "iPhone17,1":                               return .iPhone16Pro
+        case "iPhone17,2":                               return .iPhone16ProMax
             
             /*** iPad ***/
         case "iPad1,1":                                  return .iPad1
@@ -213,6 +223,10 @@ public enum DeviceVersion {
         case .iPhone15Plus: return "iPhone 15 Plus"
         case .iPhone15Pro: return "iPhone 15 Pro"
         case .iPhone15ProMax: return "iPhone 15 Pro Max"
+        case .iPhone16: return "iPhone 16"
+        case .iPhone16Plus: return "iPhone 16 Plus"
+        case .iPhone16Pro: return "iPhone 16 Pro"
+        case .iPhone16ProMax: return "iPhone 16 Pro Max"
 
             /*** iPad ***/
         case .iPad1: return "iPad 1"
